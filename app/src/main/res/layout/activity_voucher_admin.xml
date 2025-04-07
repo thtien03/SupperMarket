@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/layout_voucher_admin_root"
+    android:transitionName="transition_drawer"
+    android:layout_height="match_parent"
+    tools:context=".admin.VoucherAdminActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#C8E6C9"
+        android:padding="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_next_back"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/txt_title_carbon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/img_back"
+            android:gravity="start"
+            android:layout_marginStart="20dp"
+            android:text="Chương trình khuyến mãi"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_carbon_tracker"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:riv_corner_radius="120dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_sale_3" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_voucher"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="5dp"
+        tools:listitem="@layout/layout_item_sale_admin"
+        app:layout_constraintTop_toBottomOf="@id/relative_layout_header"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add_voucher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#03A647"
+        android:src="@drawable/img_sale"
+        app:fabCustomSize="60dp"
+        android:scaleType="center"
+        tools:ignore="ContentDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_saving_history"
+            android:title="Lịch sử sử dụng tiết kiệm"
+            android:icon="@drawable/icons8_like_done"/>
+        <item android:id="@+id/nav_article_myself"
+            android:title="Bài viết của bạn"
+            android:icon="@drawable/icons8_like_done"/>
+        <item android:id="@+id/nav_saving_article"
+            android:title="Bài viết đã lưu"
+            android:icon="@drawable/icons8_like_done"/>
+    </group>
+    <item android:title="Thông tin chi tiết">
+        <menu>
+            <item android:id="@+id/nav_change_password"
+                android:title="Thay đổi mật khẩu"
+                android:icon="@drawable/icons8_like_done"/>
+            <item android:id="@+id/nav_logout"
+                android:title="Đăng xuất"
+                android:icon="@drawable/icons8_like_done"/>
+        </menu>
+    </item>
+</menu>

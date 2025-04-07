@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_transaction_product_success"
+            android:title="Đơn hàng giao thành công"
+            android:icon="@drawable/icons8_history_35"/>
+        <item android:id="@+id/nav_transaction_product_fail"
+            android:title="Đơn hàng giao thất bại"
+            android:icon="@drawable/icons8_detail_35"/>
+        <item android:id="@+id/nav_logout"
+            android:title="Logout"
+            android:icon="@drawable/icon8_logout"/>
+    </group>
+</menu>

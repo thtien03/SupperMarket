@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/background_post_article"
+    android:paddingBottom="7dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#FFFF00" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="@+id/view_divider"
+        app:layout_goneMarginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent">
+        <ImageView
+            android:id="@+id/img_edit_post"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icons8_edit"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/img_delete_post"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@id/img_delete_post"
+            app:layout_constraintTop_toTopOf="@id/img_delete_post"/>
+        <ImageView
+            android:id="@+id/img_delete_post"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icons8_delete"
+            android:layout_marginBottom="10dp"
+            app:tint="@color/colorWhite"
+            android:padding="4dp"
+            android:background="@drawable/background_delete"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/linear_layout_user"
+            app:layout_constraintBottom_toBottomOf="@id/linear_layout_user"
+            android:contentDescription="@string/app_name" />
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/rounded_img_avatar"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/img_14"
+            app:riv_corner_radius="40dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+       <androidx.appcompat.widget.LinearLayoutCompat
+           android:id="@+id/linear_layout_user"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           app:layout_constraintBottom_toBottomOf="@id/rounded_img_avatar"
+           app:layout_constraintTop_toTopOf="@id/rounded_img_avatar"
+           android:layout_marginStart="10dp"
+           app:layout_constraintStart_toEndOf="@id/rounded_img_avatar">
+
+           <TextView
+               android:id="@+id/txt_name_user"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:fontFamily="sans-serif"
+               android:text="Carbon Tracker App"
+               android:textColor="@color/black"
+               android:textSize="20sp"
+               android:textStyle="bold"
+               />
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:id="@+id/txt_time_post_article"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="12/12/2024"
+                   android:fontFamily="sans-serif"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   android:textStyle="normal"
+                   android:textSize="16sp"
+                   android:textColor="#757575" />
+
+               <TextView
+                   android:id="@+id/txt_dot"
+                   android:layout_width="3dp"
+                   android:layout_height="3dp"
+                   android:scaleType="centerCrop"
+                   app:layout_constraintStart_toEndOf="@id/txt_time_post_article"
+                   app:layout_constraintTop_toTopOf="@id/txt_time_post_article"
+                   android:layout_marginStart="10dp"
+                   app:layout_constraintBottom_toBottomOf="@id/txt_time_post_article"
+                   android:background="@drawable/bg_background_dot"
+                   />
+               <ImageView
+                   android:layout_width="25dp"
+                   android:layout_height="25dp"
+                   android:src="@drawable/icons8_world"
+                   app:layout_constraintStart_toEndOf="@id/txt_dot"
+                   android:layout_marginStart="10dp"
+                   app:layout_constraintTop_toTopOf="@id/txt_dot"
+                   app:layout_constraintBottom_toBottomOf="@id/txt_dot"
+                   app:tint="#757575" />
+           </androidx.constraintlayout.widget.ConstraintLayout>
+       </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_title_post"
+        android:layout_width="match_parent"
+        android:layout_marginStart="7dp"
+        android:layout_height="wrap_content"
+        android:text="Biến đổi khí hậu là gì ?"
+        app:layout_constraintTop_toBottomOf="@id/constraint_layout_1"
+        app:layout_constraintStart_toStartOf="@id/constraint_layout_1"
+        android:textSize="19sp"
+        android:includeFontPadding="false"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/txt_content_post"
+        android:layout_width="match_parent"
+        android:layout_marginStart="7dp"
+        android:layout_height="wrap_content"
+        android:text="@string/target_app"
+        app:layout_constraintTop_toBottomOf="@id/txt_title_post"
+        app:layout_constraintStart_toStartOf="@id/txt_title_post"
+        android:textSize="17sp"
+        android:includeFontPadding="false"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="3dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/txt_red_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Xem thêm"
+        android:textColor="#757575"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="7dp"
+        app:layout_constraintStart_toStartOf="@id/txt_content_post"
+        app:layout_constraintTop_toBottomOf="@id/txt_content_post" />
+
+    <ImageView
+        android:id="@+id/img_post"
+        android:layout_width="match_parent"
+        android:layout_height="470dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_red_more"
+        app:layout_constraintStart_toStartOf="@id/txt_red_more"
+        android:src="@drawable/pic_clothes"
+        android:contentDescription="@string/app_name" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/img_post"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/img_like_post"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/icons8_love"
+            android:contentDescription="@string/app_name" />
+        <TextView
+            android:id="@+id/txt_number_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/img_like_post"
+            app:layout_constraintBottom_toBottomOf="@id/img_like_post"
+            app:layout_constraintStart_toEndOf="@id/img_like_post"
+            android:text="176"
+            android:layout_marginStart="5dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/img_comment"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txt_number_like"
+            android:src="@drawable/flat_chat"
+            android:layout_marginStart="20dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name"
+            app:tint="@color/black" />
+        <TextView
+            android:id="@+id/txt_number_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/img_comment"
+            app:layout_constraintStart_toEndOf="@id/img_comment"
+            app:layout_constraintTop_toTopOf="@+id/img_comment"
+            android:text="176 Bình luận"
+            app:layout_goneMarginStart="5dp"
+            android:layout_marginStart="5dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/relative_layout_shop_or_user"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="15dp"
+        android:paddingStart="4dp"
+        android:paddingTop="4dp"
+        android:visibility="gone"
+        android:paddingBottom="4dp"
+        android:paddingEnd="6dp"
+        android:background="@drawable/bg_background_access"
+        app:layout_constraintStart_toEndOf="@id/constraint_layout_icon"
+        app:layout_constraintTop_toBottomOf="@id/img_post"
+        app:layout_constraintEnd_toEndOf="@id/img_post">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_avatar_shop"
+            android:layout_width="30dp"
+            app:riv_corner_radius="100dp"
+            android:layout_height="30dp"
+            android:layout_toStartOf="@id/txt_access_shop"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_14"
+            android:layout_marginEnd="5dp"
+            android:contentDescription="@string/app_name" />
+        <TextView
+            android:id="@+id/txt_access_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Truy cập shop"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:background="@drawable/bg_background_bottom_sheet">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/img_product"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/img_14"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:riv_corner_radius="8dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_size_color"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toBottomOf="@id/img_product"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_sizes"
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:id="@+id/view_divider_size_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    android:background="#EEEEEE"
+                    app:layout_constraintTop_toBottomOf="@id/rcv_sizes"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_colors"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/view_divider_size_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <RelativeLayout
+                    android:id="@+id/relative_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/rcv_colors"
+                    app:layout_constraintStart_toStartOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/txt_title_choose_quantity"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/constraint_layout_increase_number_quantity_size_color"
+                        android:layout_height="wrap_content"
+                        android:text="Chọn số lượng"/>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_layout_increase_number_quantity_size_color"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_background_increase"
+                        android:padding="5dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_alignParentEnd="true"
+                        >
+
+
+                        <ImageView
+                            android:id="@+id/btn_decreased_size_color"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="5dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icons8_subtraction"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/btn_vertical_line_1_size_color"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icons8_vertical"
+                            app:layout_constraintBottom_toBottomOf="@id/btn_decreased_size_color"
+                            app:layout_constraintStart_toEndOf="@id/btn_decreased_size_color"
+                            app:layout_constraintTop_toTopOf="@id/btn_decreased_size_color"
+                            app:tint="#BDBDBD" />
+
+                        <TextView
+                            android:id="@+id/txt_number_size_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1 "
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/btn_vertical_line_1_size_color"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/btn_vertical_line_2_size_color"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icons8_vertical"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_number_size_color"
+                            app:layout_constraintStart_toEndOf="@id/txt_number_size_color"
+                            app:layout_constraintTop_toTopOf="@id/txt_number_size_color"
+                            app:tint="#BDBDBD" />
+
+                        <ImageView
+                            android:id="@+id/btn_increase_size_color"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icons8_add"
+                            app:layout_constraintBottom_toBottomOf="@id/btn_vertical_line_2_size_color"
+                            app:layout_constraintStart_toEndOf="@id/btn_vertical_line_2_size_color"
+                            app:layout_constraintTop_toTopOf="@id/btn_vertical_line_2_size_color"
+                            app:tint="@color/black" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/txt_title_product"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:text="Sữa milk chất lượng từ thiên nhiên, với Mall (ImageView) và văn bản sản phẩm (TextView) căn chỉnh chính xác"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@id/img_close"
+                app:layout_constraintStart_toEndOf="@id/img_product"
+                app:layout_constraintTop_toTopOf="@id/img_product" />
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="289.000VNĐ"
+                android:textColor="@color/color_primary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/img_product"
+                app:layout_constraintStart_toEndOf="@id/img_product" />
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintTop_toTopOf="@id/txt_title_product"
+                app:layout_constraintBottom_toBottomOf="@id/txt_title_product"
+                android:src="@drawable/icons8_delete"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:contentDescription="@string/app_name"
+                app:tint="#424242" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_increase_number"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_background_increase"
+                android:padding="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="7dp"
+                app:layout_constraintTop_toBottomOf="@id/txt_title_product"
+                app:layout_constraintStart_toEndOf="@id/img_product"
+                app:layout_constraintBottom_toTopOf="@id/txt_price"
+                >
+
+
+                <ImageView
+                    android:id="@+id/btn_decreased"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icons8_subtraction"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/btn_vertical_line_1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icons8_vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_decreased"
+                    app:layout_constraintStart_toEndOf="@id/btn_decreased"
+                    app:layout_constraintTop_toTopOf="@id/btn_decreased"
+                    app:tint="#BDBDBD" />
+
+                <TextView
+                    android:id="@+id/txt_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btn_vertical_line_1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/btn_vertical_line_2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icons8_vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_number"
+                    app:layout_constraintStart_toEndOf="@id/txt_number"
+                    app:layout_constraintTop_toTopOf="@id/txt_number"
+                    app:tint="#BDBDBD" />
+
+                <ImageView
+                    android:id="@+id/btn_increase"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icons8_add"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_vertical_line_2"
+                    app:layout_constraintStart_toEndOf="@id/btn_vertical_line_2"
+                    app:layout_constraintTop_toTopOf="@id/btn_vertical_line_2"
+                    app:tint="@color/black" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="7dp"
+            app:layout_constraintTop_toBottomOf="@id/constraint_layout_product"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="#EEEEEE"/>
+        <Button
+            android:id="@+id/btn_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Mua ngay"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_background_btn_pay"
+            app:layout_constraintTop_toBottomOf="@id/view_divider"/>
+        <Button
+            android:id="@+id/btn_add_to_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Thêm vào giỏ hàng"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="5dp"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_background_btn_add_to_cart_2"
+            app:layout_constraintTop_toBottomOf="@id/view_divider"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

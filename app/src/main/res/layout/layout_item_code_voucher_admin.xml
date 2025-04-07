@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/relative_sale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:background="@drawable/bg_background_sale"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_sale"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:riv_corner_radius="4dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/img_sale"
+            android:contentDescription="@string/app_name" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_sale"
+            android:layout_toStartOf="@id/img_sale_edit"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txt_title_code_voucher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Code voucher : "
+                    android:textSize="18sp"
+                    android:textColor="#29B6F6"/>
+                <TextView
+                    android:id="@+id/txt_code_voucher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/txt_title_code_voucher"
+                    android:text="abs4f36km"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="#757575"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txt_title_cost_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giảm : "
+                    android:textSize="18sp"
+                    android:textColor="#00C853"/>
+                <TextView
+                    android:id="@+id/txt_cost_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/txt_title_cost_code"
+                    android:text="30k"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="#FF5252"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/txt_date_valid_sale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="HSD: 07.12.2024"
+                android:textSize="14sp"
+                android:textColor="#757575"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/img_sale_edit"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toStartOf="@id/img_sale_delete"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/ic_edit"
+            android:layout_marginEnd="15dp"
+            android:contentDescription="@string/app_name"
+            app:tint="#29B6F6" />
+        <ImageView
+            android:id="@+id/img_sale_delete"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/ic_delete"
+            android:contentDescription="@string/app_name"
+            app:tint="#FF4081" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

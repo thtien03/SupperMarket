@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/img_product"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:scaleType="center"
+                android:src="@drawable/img_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="8dp" />
+
+            <TextView
+                android:id="@+id/txt_title_product"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="7dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:text="Sữa milk chất lượng từ thiên nhiên,chỉnh chính xác"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/img_product"
+                app:layout_constraintTop_toTopOf="@id/img_product" />
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="17dp"
+                android:text="289.000VNĐ"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/img_product"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/img_product"
+                app:layout_constraintTop_toBottomOf="@id/txt_title_product" />
+
+            <TextView
+                android:id="@+id/txt_number_product"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:includeFontPadding="false"
+                android:text="x3"
+                android:textColor="#616161"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/txt_price"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txt_price"
+                app:layout_constraintTop_toTopOf="@id/txt_price" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_below="@id/constraint_layout_order"
+            android:background="#FF80AB"/>
+        <LinearLayout
+            android:id="@+id/linear_layout_information_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/view_divider">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_label_id_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mã sản phẩm :"
+                    android:textColor="#424242"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/txt_id_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/txt_label_id_product"
+                    android:textColor="#424242"
+                    android:textSize="18sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_label_name_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tên sản phẩm :"
+                    android:textColor="#424242"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/txt_name_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/txt_label_name_product"
+                    android:textColor="#424242"
+                    android:textSize="18sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_label_date_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày đặt hàng :"
+                    android:textColor="#424242"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/txt_date_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/txt_label_date_order"
+                    android:textColor="#424242"
+                    android:textSize="18sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_label_name_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tên người đặt:"
+                    android:textColor="#424242"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/txt_name_order"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_toEndOf="@id/txt_label_name_order"
+                    android:textColor="#424242"
+                    android:textSize="18sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_label_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tổng tiền :"
+                    android:textColor="#424242"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/txt_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/txt_label_total_price"
+                    android:textColor="#D50000"
+                    android:textSize="18sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionName="transition_drawer">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/color_primary"
+        android:padding="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_back_main"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_next_back"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/txt_title_carbon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/img_back_main"
+            android:gravity="center"
+            android:text="Bài viết"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_search_article"
+            android:layout_width="40dp"
+            app:riv_corner_radius="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/menu_search" />
+    </RelativeLayout>
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@id/relative_layout_header"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_create_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/relative_layout_header"
+                app:layout_goneMarginTop="10dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/rounded_img_avatar"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="40dp" />
+
+                <TextView
+                    android:id="@+id/txt_name_user"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif"
+                    android:hint="Tạo bài viết mà bạn muốn..."
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@id/rounded_img_avatar"
+                    app:layout_constraintEnd_toStartOf="@id/img_create_article"
+                    app:layout_constraintStart_toEndOf="@id/rounded_img_avatar"
+                    app:layout_constraintTop_toTopOf="@id/rounded_img_avatar" />
+
+                <ImageView
+                    android:id="@+id/img_create_article"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/photo_library_48px"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_name_user"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txt_name_user"
+                    app:tint="#1B5E20" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_article"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/constraint_layout_create_post"
+                tools:listitem="@layout/layout_item_article" />
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_loading_data"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:visibility="invisible"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"
+                android:layout_marginTop="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:lottie_rawRes="@raw/animation_splash3"
+                app:layout_constraintTop_toBottomOf="@id/constraint_layout_create_post"
+                app:layout_constraintStart_toStartOf="parent" />
+            <LinearLayout
+                android:id="@+id/linear_layout_create_article"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="100dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraint_layout_create_post">
+
+                <TextView
+                    android:id="@+id/txt_title_article"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Chưa có bài viết nào"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thêm bài viết mới."
+                    android:textSize="16sp"
+                    android:textColor="#757575"
+                    android:textStyle="bold"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"/>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/photo_library_48px"
+                    android:layout_gravity="center"
+                    app:tint="#1B5E20"
+                    android:contentDescription="@string/app_name" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

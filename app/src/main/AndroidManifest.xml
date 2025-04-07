@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:name=".util.MarketGreenFirebaseApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MarketGreenApp"
+        tools:replace="android:theme"
+        tools:targetApi="tiramisu">
+        <activity
+            android:name=".TransactionProductFailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EvaluateProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductOrderCancelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".shipper.TransactionProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductDetailOrderSuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistoryProductOrderSuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FollowOrderProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotpasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistoryOrderProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TransactionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CategoryProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".shop.ShopCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".shop.ShopRevenueActivity"
+            android:exported="false" />
+        <activity
+            android:name=".shop.ProfileShopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".shop.AddOrUpdateProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".shop.ShopMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AddOrUpdateBannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.BannerAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BannerDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FeedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostArticleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ArticleMarketGreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_user.ProfileUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AddOrUpdateCodeVoucherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.CodeVoucherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AddOrUpdateVoucherMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.VoucherAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SaleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HelpCustomerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AnswerHelpDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateDeliveryAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeliveryAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_register.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_register.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

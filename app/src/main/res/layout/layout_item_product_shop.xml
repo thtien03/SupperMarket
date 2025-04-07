@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraint_layout_shop_root"
+    android:layout_width="match_parent"
+    android:layout_height="185dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/bg_background_edt_input">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_product"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:contentDescription="@string/target_app"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="8dp" />
+
+    <TextView
+        android:id="@+id/txt_title_product"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:text="Sữa milk chất lượng từ thiên nhiên, với Mall (ImageView) và văn bản sản phẩm (TextView) căn chỉnh chính xác"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_product"
+        app:layout_constraintTop_toTopOf="@id/img_product" />
+
+    <RatingBar
+        android:id="@+id/rating_bar"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:progressTint="@color/color_primary"
+        android:rating="4.5"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:stepSize="0.1"
+        android:translationX="-40dp"
+        app:layout_constraintStart_toEndOf="@id/img_product"
+        app:layout_constraintTop_toBottomOf="@id/txt_title_product" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationX="-50dp"
+        app:layout_constraintBottom_toBottomOf="@id/rating_bar"
+        app:layout_constraintStart_toEndOf="@id/rating_bar"
+        app:layout_constraintTop_toTopOf="@id/rating_bar">
+
+        <ImageView
+            android:id="@+id/img_star_2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icons8_star_30"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#00C853" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="4.5"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/img_star_2"
+            app:layout_constraintStart_toEndOf="@id/img_star_2"
+            app:layout_constraintTop_toTopOf="@id/img_star_2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_number_product_sold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="đã bán 227"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/img_product"
+        app:layout_constraintTop_toBottomOf="@id/constraint_layout_rate" />
+
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:text="289.000đ"
+        android:textColor="#F50057"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/img_product"
+        app:layout_constraintStart_toEndOf="@id/img_product" />
+
+    <Button
+        android:id="@+id/btn_update_product"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_background_btn_update_product"
+        android:text="Cập nhật"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/img_product"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="7dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_price">
+
+        <ImageView
+            android:id="@+id/img_add_to_cart"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_background_add_to_cart"
+            android:contentDescription="@string/app_name"
+            android:padding="7dp"
+            android:src="@drawable/icons8_add_shopping_cart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/color_primary" />
+
+        <Button
+            android:id="@+id/btn_buy_product"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_background_btn_buy_product"
+            android:text="Mua"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/img_add_to_cart"
+            app:layout_constraintStart_toEndOf="@id/img_add_to_cart"
+            app:layout_constraintTop_toTopOf="@id/img_add_to_cart" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

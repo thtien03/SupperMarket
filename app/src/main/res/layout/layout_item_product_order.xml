@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraint_layout_shop_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_background_edt_input">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_shop_user"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="120dp" />
+
+
+    <TextView
+        android:id="@+id/txt_name_shop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="Shop nhà sách"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/img_shop_user"
+        app:layout_constraintStart_toEndOf="@id/img_shop_user"
+        app:layout_constraintTop_toTopOf="@id/img_shop_user" />
+
+    <TextView
+        android:id="@+id/txt_access_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_background_access_shop"
+        android:padding="5dp"
+        android:text="Truy cập"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/txt_name_shop"
+        app:layout_constraintTop_toTopOf="@id/txt_name_shop"
+        app:layout_constraintBottom_toBottomOf="@id/txt_name_shop"
+         />
+    <ImageView
+        android:id="@+id/img_delete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_access_shop"
+        app:layout_constraintBottom_toBottomOf="@id/txt_access_shop"
+        android:src="@drawable/ic_delete"
+        android:layout_marginEnd="10dp"
+
+        app:tint="#F50057"
+        android:contentDescription="@string/app_name" />
+
+    <CheckBox
+        android:id="@+id/chk_paymenty"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/custom_chk_sale_selected"
+        android:button="@null"
+        app:layout_constraintBottom_toBottomOf="@id/img_product"
+        app:layout_constraintEnd_toStartOf="@id/img_product"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_product" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_product"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:contentDescription="@string/target_app"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic_milk"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/chk_paymenty"
+        app:layout_constraintTop_toBottomOf="@id/img_shop_user"
+        app:riv_corner_radius="8dp" />
+
+    <TextView
+        android:id="@+id/txt_title_product"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:text="Sữa milk chất lượng từ thiên nhiên, với Mall (ImageView) và văn bản sản phẩm (TextView) căn chỉnh chính xác"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_product"
+        app:layout_constraintTop_toTopOf="@id/img_product" />
+    <TextView
+        android:id="@+id/txt_size_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sản phẩm có size mà số lượng"
+        android:textColor="#4FC3F7"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/img_product"
+        app:layout_constraintTop_toBottomOf="@id/txt_title_product" />
+
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="289.000đ"
+        android:textColor="@color/color_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/img_product"
+        app:layout_constraintStart_toEndOf="@id/img_product" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_increase_number"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_background_increase"
+        android:padding="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/img_product"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <ImageView
+            android:id="@+id/btn_decreased"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icons8_subtraction"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_vertical_line_1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icons8_vertical"
+            app:layout_constraintBottom_toBottomOf="@id/btn_decreased"
+            app:layout_constraintStart_toEndOf="@id/btn_decreased"
+            app:layout_constraintTop_toTopOf="@id/btn_decreased"
+            app:tint="#BDBDBD" />
+
+        <TextView
+            android:id="@+id/txt_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_vertical_line_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_vertical_line_2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icons8_vertical"
+            app:layout_constraintBottom_toBottomOf="@id/txt_number"
+            app:layout_constraintStart_toEndOf="@id/txt_number"
+            app:layout_constraintTop_toTopOf="@id/txt_number"
+            app:tint="#BDBDBD" />
+
+        <ImageView
+            android:id="@+id/btn_increase"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icons8_add"
+            app:layout_constraintBottom_toBottomOf="@id/btn_vertical_line_2"
+            app:layout_constraintStart_toEndOf="@id/btn_vertical_line_2"
+            app:layout_constraintTop_toTopOf="@id/btn_vertical_line_2"
+            app:tint="@color/black" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

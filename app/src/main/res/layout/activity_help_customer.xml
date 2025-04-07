@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_root"
+    android:transitionName="transition_drawer">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="7dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/bg_background_title"
+            app:layout_constraintStart_toStartOf="parent">
+            <ImageView
+                android:id="@+id/img_back_main"
+                android:layout_width="37dp"
+                android:layout_centerVertical="true"
+                android:layout_height="37dp"
+                android:background="@drawable/bg_next_back"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_back" />
+            <TextView
+                android:id="@+id/txt_title_carbon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/img_back_main"
+                android:text="Trung tâm trợ giúp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_centerVertical="true"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/img_carbontracker"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/txt_market_green_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:textColor="@color/black"
+            android:includeFontPadding="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="italic"
+            android:layout_marginTop="80dp"/>
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_market_green"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:riv_corner_radius="130dp"
+            android:src="@drawable/img"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/txt_market_green_app"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/material_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="8dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/img_market_green"
+            app:cardUseCompatPadding="true">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_information"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="Chạm để tìm kiếm" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/material_cardView_about_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="8dp"
+            app:layout_constraintTop_toBottomOf="@id/material_cardView"
+            app:cardUseCompatPadding="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+                <TextView
+                    android:id="@+id/txt_title_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:text="Một số thông tin khác"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_expanded_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/layout_item_help"
+                    android:layout_marginTop="20dp"/>
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

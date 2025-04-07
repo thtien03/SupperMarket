@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="7dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:layout_marginEnd="7dp"
+    android:padding="2dp">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_product"
+        android:layout_width="85dp"
+        android:layout_height="90dp"
+        android:scaleType="center"
+        android:src="@drawable/img_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="8dp" />
+
+    <TextView
+        android:id="@+id/txt_title_product"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:text="Sữa milk chất lượng từ thiên nhiên,chỉnh chính xác"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_product"
+        app:layout_constraintTop_toTopOf="@id/img_product" />
+
+    <TextView
+        android:id="@+id/txt_size_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sản phẩm có size mà số lượng"
+        android:textColor="#4FC3F7"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/img_product"
+        app:layout_constraintTop_toBottomOf="@id/txt_title_product" />
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="37dp"
+        android:text="289.000VNĐ"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/img_product"
+        app:layout_constraintTop_toBottomOf="@id/txt_title_product" />
+
+    <TextView
+        android:id="@+id/txt_number_product"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:includeFontPadding="false"
+        android:text="x3"
+        android:textColor="#616161"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/txt_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txt_price"
+        app:layout_constraintTop_toTopOf="@id/txt_price" />
+</androidx.constraintlayout.widget.ConstraintLayout>

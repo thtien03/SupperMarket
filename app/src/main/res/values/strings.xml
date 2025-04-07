@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">MarketGreenApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="target_app"> Thị trường xanh (market green) là ứng dụng giúp mọi người có thể tương tác đăng bài viết và đăng ký mua bán sản phẩm theo dõi đơn hàng với nhiều loại mặt hàng khác nhau.
+    </string>
+    <string name="help1">
+        Đơn hàng của bạn bị hủy bởi nhà bán hàng do những lý do sau:\n\n
+            1.Hết hàng: Sản phẩm quý khách đặt mua hiện đã hết hàng.\n
+            2.Không thể giao hàng đến địa chỉ: Địa chỉ giao hàng mà quý khách cung cấp không nằm trong khu vực giao hàng hoặc có vấn đề về thông tin địa chỉ.\n
+            3.Vấn đề thanh toán: Việc thanh toán đơn hàng không hoàn tất hoặc có vấn đề phát sinh.\n\n
+        Quy trình hoàn tiền:\n\n
+            1.Phương thức hoàn tiền: Số tiền sẽ được hoàn lại vào tài khoản [Phương thức thanh toán] mà quý khách đã sử dụng để thanh toán đơn hàng.\n
+            2.Thời gian hoàn tiền: Thời gian hoàn tiền có thể thay đổi tùy thuộc vào từng phương thức thanh toán và ngân hàng.\n
+    </string>
+    <string name="help2">kaka</string>
+    <string name="help3">kaka</string>
+    <string name="help4">kaka</string>
+    <string name="help5">kaka</string>
+    <string name="help6">kaka</string>
+
+
+    <string name="support">Thể thao</string>
+    <string name="fruit">Trái cây</string>
+    <string name="clothes">Áo quần</string>
+    <string name="books">Sách,truyện</string>
+    <string name="drink">Nước</string>
+    <string name="smartphone">Điện thoại</string>
+    <string name="laptop">Máy tính</string>
+    <string name="shoes">Giày dép</string>
+    <string name="motorbike">Xe máy</string>
+    <string name="milk">Sữa</string>
+    <string name="home_appliances">Tủ lạnh,máy lạnh,máy giặt</string>
+
+
+    <string name="accept_rules"><![CDATA[Tôi đồng ý với Điều kiện & Điều khoản,cam kết mua hàng đúng quy định]]></string>
+
+    <string name="client_google">85363744242-mgk3r6uvqcknk0pf5h90vpbs98oaoetv.apps.googleusercontent.com</string>
+</resources>

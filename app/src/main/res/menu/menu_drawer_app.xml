@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_history_order_product_success"
+            android:title="Lịch sử đặt hàng"
+            android:icon="@drawable/icons8_history_35"/>
+        <item android:id="@+id/nav_history_order_product"
+            android:title="Chi tiết đơn hàng"
+            android:icon="@drawable/icons8_detail_35"/>
+        <item
+            android:id="@+id/nav_article"
+            android:icon="@drawable/img_1"
+            android:title="Cộng đồng Bài viết" />
+        <item android:id="@+id/nav_follow_order_product"
+            android:title="Theo dõi đơn hàng"
+            android:icon="@drawable/img_order"/>
+        <item android:id="@+id/nav_community"
+            android:title="Địa chỉ nhận hàng"
+            android:icon="@drawable/icons8_address_delivery_35"/>
+        <item android:id="@+id/nav_logout"
+            android:title="Logout"
+            android:icon="@drawable/icon8_logout"/>
+    </group>
+</menu>

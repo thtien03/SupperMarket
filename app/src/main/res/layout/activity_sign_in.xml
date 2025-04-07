@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_sign_in"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:transitionName="transition_register">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_9"
+        android:orientation="vertical"
+        android:transitionName="transition_drawer">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_penguin_sign_in"
+            android:layout_width="290dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_10" />
+
+        <TextView
+            android:id="@+id/tv_logo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:includeFontPadding="false"
+            android:text="Đăng Nhập Với Tài Khoản Của Bạn"
+            android:textColor="#00E676"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="5dp"
+                android:textColorHint="@android:color/darker_gray"
+                app:boxStrokeColor="@color/white"
+                app:hintTextColor="@android:color/darker_gray"
+                app:startIconContentDescription="Email Icon"
+                app:startIconDrawable="@drawable/icon8_user"
+                app:startIconTint="@color/sign_up">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_background_edt_sign_in_out"
+                    android:hint="email đăng nhập"
+                    android:inputType="textPersonName"
+                    android:padding="16dp"
+                    android:paddingStart="45dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    tools:ignore="TextFields" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:textColorHint="@android:color/darker_gray"
+                app:endIconMode="clear_text"
+                app:startIconContentDescription="Password Icon"
+                app:startIconDrawable="@drawable/ic_password"
+                app:startIconTint="@color/sign_up"
+                tools:ignore="PrivateResource">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_background_edt_sign_in_out"
+                    android:hint="Mật khẩu"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:padding="16dp"
+                    android:paddingStart="45dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@android:color/darker_gray" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_forgot_password"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="#00000000"
+
+                android:elevation="0dp"
+                android:includeFontPadding="false"
+                android:text="Quên mật khẩu?"
+                android:textAllCaps="false"
+                android:textColor="#29B6F6"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_background_btn_sign"
+            android:text="Đăng nhập"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <View
+                android:id="@+id/view_divider1"
+                android:layout_width="170dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#BDBDBD"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_title_or"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="OR"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/view_divider1"
+                app:layout_constraintEnd_toStartOf="@id/view_divider2"
+                app:layout_constraintStart_toEndOf="@id/view_divider1"
+                app:layout_constraintTop_toTopOf="@id/view_divider1" />
+
+            <View
+                android:id="@+id/view_divider2"
+                android:layout_width="170dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#BDBDBD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="10dp">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_google"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_background_login_or"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img_google"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icons8_google" />
+
+                <TextView
+                    android:id="@+id/txt_google"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/img_google"
+                    android:gravity="center"
+                    android:text="Đăng nhập bằng Google"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_facebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_background_login_or"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/relative_layout_google">
+
+                <ImageView
+                    android:id="@+id/img_facebook"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icons8_facebook" />
+
+                <TextView
+                    android:id="@+id/txt_facebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/img_facebook"
+                    android:gravity="center"
+                    android:text="Đăng nhập bằng Facebook"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="end"
+            android:text="Chưa có tài khoản ? "
+            android:textColor="@color/color_primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="Đăng Ký"
+            android:textColor="#FF1744"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/product_other_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="7dp"
+    android:layout_marginEnd="7dp"
+    android:layout_marginBottom="7dp"
+    android:background="@drawable/background_product_item"
+    android:elevation="3dp"
+    android:padding="4dp">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_product"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/target_app"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius_top_left="8dp"
+        app:riv_corner_radius_top_right="8dp" />
+
+    <TextView
+        android:id="@+id/txt_title_product"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:text="Thiết kế của bạn sẽ giống hình mong muốn, với Mall (ImageView) và văn bản sản phẩm (TextView) căn chỉnh chính xác"
+        android:textColor="#424242"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/img_product"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_product" />
+
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="289.000đ"
+        android:textColor="#F50057"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_layout_rate" />
+
+    <TextView
+        android:id="@+id/txt_number_product_sold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="đã bán 227"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/txt_price"
+        app:layout_constraintTop_toBottomOf="@id/txt_price" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/txt_title_product"
+        app:layout_constraintTop_toBottomOf="@id/txt_title_product">
+
+        <ImageView
+            android:id="@+id/img_star_2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icons8_star_30"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#00C853" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="4.9"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/img_star_2"
+            app:layout_constraintStart_toEndOf="@id/img_star_2"
+            app:layout_constraintTop_toTopOf="@id/img_star_2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

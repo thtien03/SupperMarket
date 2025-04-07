@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "85363744242",
+    "firebase_url": "https://dacn-market-app-default-rtdb.firebaseio.com",
+    "project_id": "dacn-market-app",
+    "storage_bucket": "dacn-market-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85363744242:android:284713ed76389f8fef1f6b",
+        "android_client_info": {
+          "package_name": "com.example.marketgreenapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpN5rM1OlZuTjz5qt1y0ZiZaixm2tBopU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

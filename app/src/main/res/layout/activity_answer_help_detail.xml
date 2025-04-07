@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionName="transition_drawer">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:padding="7dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/bg_background_title"
+            app:layout_constraintStart_toStartOf="parent">
+            <ImageView
+                android:id="@+id/img_back_carbon_tracker"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_next_back"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_back" />
+            <TextView
+                android:id="@+id/txt_title_carbon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/img_back_carbon_tracker"
+                android:text="CarbonTracker"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_centerVertical="true"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/img_carbontracker"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/material_cardView_about_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_constraintTop_toBottomOf="@id/relative_layout_header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:includeFontPadding="false"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:gravity="start" />
+                <ImageView
+                    android:id="@+id/img_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:src="@drawable/img_help_detail"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:contentDescription="@string/app_name" />
+                <TextView
+                    android:id="@+id/txt_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/help5"
+                    android:includeFontPadding="false"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/black"
+                    android:gravity="start" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

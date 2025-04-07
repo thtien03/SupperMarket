@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="7dp"
+    android:layout_marginStart="7dp"
+    android:layout_marginEnd="7dp"
+    android:id="@+id/layout_item_delivery_root"
+    android:background="@drawable/bg_background_edt_input"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_1"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:id="@+id/txt_name_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Nguyễn Văn Nguyên"
+            android:textColor="@color/black"/>
+        <View
+            android:id="@+id/view_divider1"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="7dp"
+            app:layout_constraintTop_toTopOf="@id/txt_name_user"
+            app:layout_constraintStart_toEndOf="@id/txt_name_user"
+            app:layout_constraintBottom_toBottomOf="@id/txt_name_user"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/txt_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(+84) 868 636 868"
+            app:layout_constraintStart_toEndOf="@id/view_divider1"
+            android:layout_marginStart="7dp"
+            android:textSize="16sp"
+            android:textColor="#616161"
+            app:layout_constraintTop_toTopOf="@id/view_divider1"
+            app:layout_constraintBottom_toBottomOf="@id/view_divider1"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_layout_1"
+        app:layout_constraintStart_toStartOf="@id/constraint_layout_1">
+
+        <TextView
+            android:id="@+id/txt_delivery_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#616161"
+            android:textSize="16sp"
+            android:paddingTop="4dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="4dp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginEnd="50dp"
+            android:includeFontPadding="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Địa chỉ : 3/21 Đường số 10 , Phường Linh Trung , Thành phố Thủ Đức , TP.Hồ Chí Minh"
+            tools:ignore="RtlSymmetry" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txt_notify"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/btn_update_delivery_address"
+        android:background="@drawable/bg_background_default_selected_delivery"
+        app:layout_constraintTop_toTopOf="@id/btn_update_delivery_address"
+        android:text="Mặc định"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/btn_update_delivery_address"
+        android:layout_marginEnd="10dp"
+        android:textColor="#00C853"
+        app:layout_constraintStart_toStartOf="@id/constraint_layout_2"/>
+    <Button
+        android:id="@+id/btn_update_delivery_address"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_background_btn_update_delivery_address"
+        app:layout_constraintStart_toEndOf="@id/txt_notify"
+        android:text="Chỉnh thông tin"
+        android:layout_marginStart="5dp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        android:textColor="#F50057"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_layout_2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shop_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionName="transition_drawer"
+    tools:context=".ShopActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:padding="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_back_main"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_next_back_green"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_back" />
+
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_information"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/img_back_main"
+            android:background="@drawable/bg_background_edt_input"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="Chạm để tìm kiếm" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_shop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relative_layout_header">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_shop_user"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="15dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="120dp" />
+
+        <TextView
+            android:id="@+id/txt_name_shop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Shop nhà sách"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/img_shop_user"
+            app:layout_constraintTop_toTopOf="@id/img_shop_user" />
+
+        <ImageView
+            android:id="@+id/img_star_shop"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icons8_star_30"
+            app:layout_constraintStart_toStartOf="@id/txt_name_shop"
+            app:layout_constraintTop_toBottomOf="@id/txt_name_shop"
+            app:tint="#00C853" />
+
+        <TextView
+            android:id="@+id/txt_number_rating_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="4.5"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/img_star_shop"
+            app:layout_constraintStart_toEndOf="@id/img_star_shop"
+            app:layout_constraintTop_toTopOf="@id/img_star_shop" />
+
+        <TextView
+            android:id="@+id/txt_number_sold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/bg_background_sold"
+            android:padding="4dp"
+            android:text="81.3k đã bán"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/txt_number_rating_shop"
+            app:layout_constraintStart_toEndOf="@id/txt_number_rating_shop"
+            app:layout_constraintTop_toTopOf="@id/txt_number_rating_shop" />
+
+        <Button
+            android:id="@+id/btn_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Theo dõi"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Nhắn tin"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@id/img_shop_user"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_follow" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view_divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/color_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_layout_shop" />
+
+    <TextView
+        android:id="@+id/txt_title_prouct_shop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#E0F2F1"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Sản phẩm của shop"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_divider_1" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_loading_data"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:layout_marginTop="70dp"
+        app:lottie_rawRes="@raw/animation_splash3"
+        app:layout_constraintTop_toBottomOf="@id/txt_title_prouct_shop"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_product_shop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/layout_item_product_shop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title_prouct_shop" />
+</androidx.constraintlayout.widget.ConstraintLayout>

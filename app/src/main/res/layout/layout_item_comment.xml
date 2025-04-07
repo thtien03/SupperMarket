@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="5dp"
+    android:background="@android:color/white">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/rounded_img_avatar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="40dp" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_layout_profile_user"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_user_comment"
+        android:orientation="vertical"
+        android:layout_marginStart="5dp"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:paddingStart="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rounded_img_avatar"
+        app:layout_constraintTop_toTopOf="@id/rounded_img_avatar"
+        tools:ignore="RtlSymmetry">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp">
+
+            <TextView
+                android:id="@+id/txt_name_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="nguyendev"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_time_post_article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="sans-serif"
+                android:text="12/12/2024"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/txt_name_user"
+                app:layout_constraintStart_toEndOf="@id/txt_name_user"
+                app:layout_constraintTop_toTopOf="@id/txt_name_user" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:id="@+id/txt_content_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="start"
+                android:text="okei 1234567 noi chung van cu la 0ke la"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <ImageView
+        android:id="@+id/img_like_comment"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/icons8_love"
+        app:layout_constraintStart_toStartOf="@id/linear_layout_profile_user"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_profile_user" />
+
+    <TextView
+        android:id="@+id/txt_number_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="10dp"
+        android:text="1 lượt thích"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/img_like_comment"
+        app:layout_constraintStart_toEndOf="@id/img_like_comment"
+        app:layout_constraintTop_toTopOf="@id/img_like_comment" />
+
+    <TextView
+        android:id="@+id/txt_response"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="Trả lời"
+        android:textColor="#757575"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/txt_number_like"
+        app:layout_constraintStart_toEndOf="@id/txt_number_like"
+        app:layout_constraintTop_toTopOf="@id/txt_number_like" />
+</androidx.constraintlayout.widget.ConstraintLayout>

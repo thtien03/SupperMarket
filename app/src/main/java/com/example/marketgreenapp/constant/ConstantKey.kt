@@ -1,0 +1,109 @@
+package com.example.marketgreenapp.constant
+
+object ConstantKey {
+    const val KEY_INTENT_BANNER = "KEY_INTENT_BANNER"
+    const val SHARED_PREFERENCES_GLOBAL = "My_Shared_Market_Green_App"
+    const val SHARED_PREFERENCES_USER = "My_Shared_User"
+
+
+    const val KEY_CODE_ADMIN = "abc123@admin"
+
+    const val CLOUD_KEY_USERNAME = "USER_NAME_CLOUD"
+    const val CLOUD_KEY_PASSWORD = "USER_PASSWORD_CLOUD"
+    const val CLOUD_KEY_PHONE = "USER_PHONE_CLOUD"
+    const val CLOUD_KEY_EMAIL = "USER_EMAIL_CLOUD"
+    const val CLOUD_KEY_BIRTHDAY = "USER_BIRTHDAY_CLOUD"
+
+
+    const val CLOUD_KEY_IS_ROLE = "IS_ROLE"
+    const val CLOUD_KEY_IS_ENABLE = "IS_ENABLE"
+    const val CLOUD_KEY_IS_UID = "USER_UID"
+    const val CLOUD_KEY_IS_SALT = "KEY_SALT_CLOUD"
+
+
+
+    const val LINK_WEB_GHG = "https://ghgprotocol.org"
+    const val CONTACT_PHONE = "0865936174"
+    const val CONTACT_EMAIL= "nguyennv@gmail.com"
+    const val CONTACT_FB= "facebook.com/ghgprotocol?mibextid=JRoKGi"
+
+
+
+    const val KEY_TIP = "TIP"
+
+
+    const val KEY_ACTION_POST = "KEY_ACTION_POST"
+    const val VALUE_ADD_POST = "VALUE_ADD_POST"
+
+
+    const val KEY_ACTION_DELIVERY = "KEY_ACTION_DELIVERY"
+    const val VALUE_ADD_DELIVERY = "VALUE_ADD_DELIVERY"
+
+
+    const val KEY_POST = "KEY_POST"
+    const val KEY_POST_COMMENT = "KEY_POST_COMMENT"
+
+
+    const val KEY_DELIVERY = "DELIVERY"
+    const val KEY_DELIVERY_UPDATE = "KEY_DELIVERY_UPDATE"
+
+    const val KEY_BOOLEAN_EDIT_POST = "KEY_BOOLEAN_EDIT_POST"
+    const val VALUE_EDIT_POST = "VALUE_EDIT_POST"
+
+    const val VALUE_EDIT_DELIVERY = "VALUE_EDIT_DELIVERY"
+
+
+
+    const val QUATITYLIKE = "quantityLike"
+
+
+    const val KEY_VOUCHER_ADMIN = "KEY_VOUCHER_ADMIN"
+    const val KEY_CODE_VOUCHER_ADMIN = "KEY_CODE_VOUCHER_ADMIN"
+
+
+
+    const val KEY_CATEGORY_SHOP = "KEY_CATEGORY_SHOP"
+
+
+
+
+    const val KEY_PRODUCT = "KEY_PRODUCT"
+    const val KEY_PRODUCT_DETAIL_ORDER_SUCCESS = "KEY_PRODUCT_DETAIL_ORDER_SUCCESS"
+    const val KEY_ACTION_PRODUCT = "KEY_ACTION_PRODUCT"
+    const val KEY_ADD_PRODUCT = "KEY_ADD_PRODUCT"
+    const val KEY_EDIT_PRODUCT = "KEY_EDIT_PRODUCT"
+    const val KEY_UPDATE_PRODUCT = "KEY_UPDATE_PRODUCT"
+
+
+
+    const val KEY_INTENT_PRODUCT_HOME = "KEY_INTENT_PRODUCT_HOME"
+    const val KEY_INTENT_HOME_PRODUCT_KEY = "KEY_INTENT_HOME_PRODUCT_KEY"
+
+    const val KEY_INTENT_CATEGORY_HOME = "KEY_INTENT_CATEGORY_HOME"
+    const val KEY_INTENT_CATEGORY_PRODUCT_KEY = "KEY_INTENT_CATEGORY_PRODUCT_KEY"
+
+    const val KEY_INTENT_PRODUCT_SHOP = "KEY_INTENT_PRODUCT_SHOP"
+    const val KEY_INTENT_SHOP_PRODUCT_KEY = "KEY_INTENT_SHOP_PRODUCT_KEY"
+
+
+    const val KEY_INTENT_POST_USERID = "KEY_INTENT_POST_USERID"
+
+
+    const val KEY_PRODUCT_CHOOSE_LIST = "KEY_PRODUCT_CHOOSE_LIST"
+    const val KEY_PRODUCT_BUY_AGAIN = "KEY_PRODUCT_BUY_AGAIN"
+    const val KEY_PRODUCT_TOTAL_PRICE = "KEY_PRODUCT_TOTAL_PRICE"
+
+
+
+    const val KEY_PRODUCT_ORDER_BOTTOM_SHEET= "KEY_PRODUCT_ORDER_BOTTOM_SHEET"
+    const val KEY_PRODUCT_BOTTOM_SHEET= "KEY_PRODUCT_BOTTOM_SHEET"
+
+
+
+    const val KEY_PRICE_SALE_VOUCHER = "KEY_PRICE_SALE_VOUCHER"
+    const val KEY_VOUCHER_SELECTED = "KEY_VOUCHER_SELECTED"
+
+
+
+    const val KEY_PRODUCT_PAYMENT_SUCCESS = "KEY_PRODUCT_PAYMENT_SUCCESS"
+}
